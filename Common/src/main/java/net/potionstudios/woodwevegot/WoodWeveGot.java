@@ -2,6 +2,8 @@ package net.potionstudios.woodwevegot;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
+import net.potionstudios.woodwevegot.config.ConfigLoader;
+import net.potionstudios.woodwevegot.config.configs.WWGConfig;
 import net.potionstudios.woodwevegot.world.level.block.WWGBlocks;
 import net.potionstudios.woodwevegot.world.level.block.entity.WWGBlockEntities;
 import org.slf4j.Logger;
@@ -13,6 +15,9 @@ public class WoodWeveGot {
 
     /** The logger for All The Wood We've Got. */
     public static final Logger LOGGER = LogUtils.getLogger();
+
+    /** The Config **/
+    public static final WWGConfig CONFIG = ConfigLoader.loadConfig(WWGConfig.class);
 
     /**
      * Initializes the mod.
